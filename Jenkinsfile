@@ -93,7 +93,7 @@ def deploy(String environment, int port){
 
 def test(String greetings, String environment){
     echo "Testing ${grettings} test set on ${environment} is starting.."
-    git branch: 'main', poll: false, url: 'https://github.com/AdrianaaM01/course-js-api-framework.git'
+    git branch: 'main', poll: false, url: 'https://github.com/AdrianaaM01/python-greetings.git'
     bat "cd"
     bat "npm install"
     bat "npm run greetings greetings_${environment}"
