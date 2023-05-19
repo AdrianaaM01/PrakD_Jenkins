@@ -20,7 +20,7 @@ pipeline {
         stage('Tests-on-dev') {
             steps {
                 script{
-                    test("GREET", "DEV")
+                    test("greetings", "DEV")
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage('Tests-on-staging') {
             steps {
                 script{
-                    test("GREET", "STG")
+                    test("greetings", "STG")
                 }
             }
         }
@@ -49,7 +49,7 @@ pipeline {
         stage('Tests-on-preprod') {
             steps {
                 script{
-                    test("GREET", "PPRD")
+                    test("greetings", "PPRD")
                 }
             }
         }
@@ -64,7 +64,7 @@ pipeline {
         stage('Tests-on-prod') {
             steps {
                 script{
-                    test("GREET", "PRD")
+                    test("greetings", "PRD")
                 }
             
             }
@@ -96,7 +96,7 @@ def test(String test_set, String environment){
     git branch: 'main', poll: false, url: 'https://github.com/AdrianaaM01/course-js-api-framework.git'
     bat "cd"
     bat "npm install"
-    bat "npm run greetings greetings_${environment}"
+    bat "npm run ${test_set} ${test_set}_${environment}"
 }
 
 
