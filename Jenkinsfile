@@ -53,7 +53,7 @@ pipeline {
 
 def build(){
     echo "“Installing all required depdendencies.."
-    git branch: 'main', url: 'https://github.com/AdrianaaM01/PrakD_Jenkins.git'
+    git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
     bat "cd"
     bat "Pip install virtualenv"
     bat "pip install -r requirements.txt"
@@ -61,15 +61,15 @@ def build(){
 }
 
 def deploy(String environment, int port){
-    echo "Deployment to ${environment} has started.."
-    git branch: 'main', url: 'https://github.com/AdrianaaM01/sample-book-app.git'
+    echo "Deployment to the ${environment} is starting.."
+    git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
     bat "npm install"
     bat "pm2 delete \"books-${environment}\""
     bat "pm2 start -n \"books-${environment}\" index.js -- ${port}"
 }
 
 def test(String test_set, String environment){
-    echo "Testing ${test_set} test set on ${environment} has started.."
+    echo "Testing ${test_set} test set on ${environment} is starting.."
     git branch: 'main', poll: false, url: 'https://github.com//AdrianaaM011/course-js-api-framework.git'
     bat "cd"
     bat "npm install"
