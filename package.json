@@ -2,7 +2,7 @@
   "name": "prakd_jenkins",
   "version": "1.0.0",
   "description": "for homework",
-  "main": "index.js",
+  "main": "app.py",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
