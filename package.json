@@ -1,0 +1,11 @@
+{
+  "name": "prakd_jenkins",
+  "version": "1.0.0",
+  "description": "greet",
+  "main": "app.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
