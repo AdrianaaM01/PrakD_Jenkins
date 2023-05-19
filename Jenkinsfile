@@ -11,40 +11,40 @@ pipeline {
             }
         }
         stage('Deploy-to-dev') {
-            steps {
-            }
+          //  steps {
+          //  }
         }
         stage('Tests-on-dev') {
-            steps {
-            }
+          //  steps {
+          //  }
         }
         stage('Deploy-to-staging') {
-            steps {
-            }
+           // steps {
+          //  }
         }
         stage('Tests-on-staging') {
-            steps {
-            }
+           // steps {
+           // }
         }
         stage('Deploy-to-preprod') {
-            steps {
+           // steps {
 
-            }
+           // }
         }
         stage('Tests-on-preprod') {
-            steps {
+           // steps {
             
-            }
+           // }
         }
         stage('Deploy-to-prod') {
-            steps {
+           // steps {
             
-            }
+           // }
         }
         stage('Tests-on-prod') {
-            steps {
+            //steps {
             
-            }
+           // }
         }
     }
 }
