@@ -78,9 +78,9 @@ def build(){
     echo "“Installing all required depdendencies.."
     git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
     bat "cd"
-    bat "Pip3 install virtualenv"
-    bat "Pip3 freeze > requirements.txt "
-    bat "pip3 install -r requirements.txt"
+    bat "Pip install virtualenv"
+    bat "Pip freeze > requirements.txt "
+    bat "pip install -r requirements.txt"
 
 }
 
