@@ -56,7 +56,6 @@ def build(){
     git branch: 'main', url: 'https://github.com/AdrianaaM01/PrakD_Jenkins.git'
     bat "cd"
     bat "Pip install virtualenv"
-    bat "Python –m venv envi"
     bat "pip install -r requirements.txt"
 
 }
