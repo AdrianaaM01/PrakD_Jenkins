@@ -77,6 +77,7 @@ pipeline {
 def build(){
     echo "“Installing all required depdendencies.."
     git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
+    bat "npm install"
     bat "dir"
     bat "Pip install virtualenv"
     //bat "Pip freeze > requirements.txt "
@@ -87,6 +88,7 @@ def build(){
 def deploy(String environment, int port){
     echo "Deployment to the ${environment} is starting.."
     git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
+    bat "npm install"
     bat "pm2 delete \"greetings-app-${environment}\" & set errorlevel=0"
     bat "pm2 start app.py --name greetings-app-${environment} -- --port ${port}"
 }
