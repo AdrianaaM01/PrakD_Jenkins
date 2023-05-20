@@ -77,7 +77,6 @@ pipeline {
 def build(){
     echo "“Installing all required depdendencies.."
     git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
-    bat "npm install"
     bat "dir"
     bat "Pip install virtualenv"
     //bat "Pip freeze > requirements.txt "
