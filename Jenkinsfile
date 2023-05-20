@@ -77,7 +77,7 @@ pipeline {
 def build(){
     echo "“Installing all required depdendencies.."
     git branch: 'main', url: 'https://github.com/AdrianaaM01/python-greetings.git'
-    bat "cd"
+    bat "dir"
     bat "Pip install virtualenv"
     //bat "Pip freeze > requirements.txt "
     bat "pip install -r requirements.txt"
@@ -94,7 +94,7 @@ def deploy(String environment, int port){
 def test(String test_set, String environment){
     echo "Testing ${test_set} test set on ${environment} is starting.."
     git branch: 'main', poll: false, url: 'https://github.com/AdrianaaM011/course-js-api-framework.git'
-    bat "cd"
+    bat "dir"
     bat "npm install"
     bat "npm run ${test_set} ${test_set}_${environment}"
 }
